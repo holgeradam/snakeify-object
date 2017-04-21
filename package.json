@@ -1,0 +1,34 @@
+{
+  "name": "snakeify_object",
+  "version": "0.1.0",
+  "description": "puts all keys of an object into snake casing (plain english only)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test --recursive"
+  },
+  "keywords": [
+    "snake",
+    "case",
+    "object",
+    "node"
+  ],
+  "author": "Holger Adam",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holgeradam/snakeify_object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/holgeradam/snakeify_object/issues"
+  },
+  "homepage": "https://github.com/holgeradam/snakeify_object#readme"
+}
