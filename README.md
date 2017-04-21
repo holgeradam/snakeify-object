@@ -5,5 +5,5 @@ A simple one method library for transforming an object with snake cased keys int
 ```
 const snakeifyObject = require("snakeify-object");
    
-snakeifyObject({pleaseNo: "camelCase"});
+let camelCased = snakeifyObject({pleaseNo: "camelCase"});
 ```
