@@ -1,5 +1,5 @@
 {
-  "name": "snakeify_object",
+  "name": "snakeify-object",
   "version": "0.1.0",
   "description": "puts all keys of an object into snake casing (plain english only)",
   "main": "index.js",
