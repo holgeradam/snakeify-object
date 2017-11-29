@@ -24,6 +24,18 @@ describe("snakeify test", () => {
         expect(snakeify_object(cameled)).to.deep.equal(expected);
     });
 
+    it("should snakeify a hyphened property", () => {
+        const hyphened = {
+            "a-property": true
+        };
+
+        const expected = {
+            "a_property": true
+        };
+
+        expect(snakeify_object(hyphened)).to.deep.equal(expected);
+    });
+
     it("should snakeify a nested camel cased object", () => {
         const cameled = {
             someNestedProperty: {
@@ -45,15 +57,15 @@ describe("snakeify test", () => {
     it("should snakeify an object containing an array of objects", () => {
         const cameled = {
             someArrayOfObjects: [
-                {aProperty: 1},
-                {anotherProperty: "wat"}
+                { aProperty: 1 },
+                { anotherProperty: "wat" }
             ]
         };
 
         const expected = {
             some_array_of_objects: [
-                {a_property: 1},
-                {another_property: "wat"}
+                { a_property: 1 },
+                { another_property: "wat" }
             ]
         };
 
@@ -62,14 +74,14 @@ describe("snakeify test", () => {
 
     it("should snakeify an array of objects", () => {
         const cameled = [
-                {aProperty: 1},
-                {anotherProperty: "wat"}
-            ];
+            { aProperty: 1 },
+            { anotherProperty: "wat" }
+        ];
 
         const expected = [
-                {a_property: 1},
-                {another_property: "wat"}
-            ];
+            { a_property: 1 },
+            { another_property: "wat" }
+        ];
 
         expect(snakeify_object(cameled)).to.deep.equal(expected);
     });
