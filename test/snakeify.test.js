@@ -36,6 +36,24 @@ describe("snakeify test", () => {
         expect(snakeify_object(hyphened)).to.deep.equal(expected);
     });
 
+    it("should snakeify a word with a number correctly", () => {
+        const numbered = {
+            "a2b": true,
+            "b2B": false,
+            "C2b": true,
+            "D2D": false
+        };
+
+        const expected = {
+            "a_2_b": true,
+            "b_2_b": false,
+            "c_2_b": true,
+            "d_2_d": false
+        };
+
+        expect(snakeify_object(numbered)).to.deep.equal(expected);
+    });
+
     it("should snakeify a nested camel cased object", () => {
         const cameled = {
             someNestedProperty: {
