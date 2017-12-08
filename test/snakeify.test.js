@@ -11,14 +11,16 @@ describe("snakeify test", () => {
             someProperty: "value",
             aUUID: "123-456",
             anArray: [1, 2, 3],
-            thisIsNull: null
+            thisIsNull: null,
+            anEndingA: true
         };
 
         const expected = {
             some_property: "value",
             a_uuid: "123-456",
             an_array: [1, 2, 3],
-            this_is_null: null
+            this_is_null: null,
+            an_ending_a: true
         };
 
         expect(snakeify_object(cameled)).to.deep.equal(expected);
@@ -41,14 +43,18 @@ describe("snakeify test", () => {
             "a2b": true,
             "b2B": false,
             "C2b": true,
-            "D2D": false
+            "D2D": false,
+            "e2eFollowed": true,
+            "someTextWith1Number": false
         };
 
         const expected = {
-            "a_2_b": true,
-            "b_2_b": false,
-            "c_2_b": true,
-            "d_2_d": false
+            "a2b": true,
+            "b2_b": false,
+            "c_2b": true,
+            "d_2_d": false,
+            "e2e_followed": true,
+            "some_text_with1_number": false
         };
 
         expect(snakeify_object(numbered)).to.deep.equal(expected);
